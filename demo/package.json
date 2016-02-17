@@ -1,0 +1,22 @@
+{
+  "name": "react-component-permutations-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "static-react Root.js > index.html"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "colors.css": "^3.0.0",
+    "react": "^0.14.7",
+    "static-react": "^3.1.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0",
+      "react"
+    ]
+  }
+}
