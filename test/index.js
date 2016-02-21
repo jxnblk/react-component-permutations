@@ -64,6 +64,22 @@ const components = {
   Input: `
     import React from 'react'
 
+    var sizes = [ 8, 16, 24 ]
+
+    var Input = React.createClass({
+      propTypes: {
+        size: React.PropTypes.oneOf(sizes)
+      },
+      render: function () {
+        var style = {
+          padding: size
+        }
+        return (
+          <input {...this.props} style={style} />
+        )
+      }
+    })
+    module.exports = Input
   `
 }
 
@@ -96,6 +112,18 @@ ava('allows configurable keys', t => {
     color: ['green', 'blue']
   })
   t.same(p.length, 8)
+})
+
+ava('returns correct values for configurable keys', t => {
+  const p = permutations(components.Button, {
+    color: ['green', 'blue']
+  })
+  t.same(p[0].color, 'green')
+})
+
+ava('should handle computed enum', t => {
+  const p = permutations(components.Input)
+  t.same(p[0], undefined)
 })
 
 ava('allows configurable strings', t => {

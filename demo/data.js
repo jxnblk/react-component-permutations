@@ -6,9 +6,15 @@ import permutations from '..'
 
 const ButtonSrc = fs.readFileSync('Button.js', 'utf8')
 
+const colorKeys = Object.keys(colors)
+  .filter(key => key !== 'white')
+
 const data = {
-  permutations: permutations(ButtonSrc, {
-    color: Object.keys(colors)
+  ButtonSrc,
+  permutations: permutations(ButtonSrc),
+  permutationsColors: permutations(ButtonSrc, {
+    color: colorKeys,
+    children: [ 'Hello', 'Howdy' ]
   })
 }
 

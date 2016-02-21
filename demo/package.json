@@ -2,6 +2,7 @@
   "name": "react-component-permutations-demo",
   "version": "1.0.0",
   "scripts": {
+    "test": "static-react Root.js",
     "start": "static-react Root.js > index.html"
   },
   "devDependencies": {

@@ -1,6 +1,7 @@
-
 import React from 'react'
 import colors from 'colors.css'
+
+const colorKeys = Object.keys(colors)
 
 const Button = ({ big, color, pill, outline, ...props }) => (
   <button
@@ -20,14 +21,7 @@ const Button = ({ big, color, pill, outline, ...props }) => (
 
 Button.propTypes = {
   big: React.PropTypes.bool,
-  color: React.PropTypes.oneOf([
-    ...Object.keys(colors),
-    // 'dodgerblue',
-    // 'mediumturquoise',
-    // 'tomato',
-    // 'goldenrod',
-    // 'dimgray',
-  ]),
+  color: React.PropTypes.oneOf(colorKeys),
   pill: React.PropTypes.bool,
   outline: React.PropTypes.bool
 }
@@ -37,4 +31,3 @@ Button.defaultProps = {
 }
 
 export default Button
-
