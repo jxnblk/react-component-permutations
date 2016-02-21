@@ -1,6 +1,6 @@
 
 import { parse } from 'react-docgen'
-import getPermutations from './lib/get-permutations'
+import getPermutations from './get-permutations'
 
 export default function (src, opts) {
   opts = opts || {}

@@ -1,6 +1,6 @@
 
 import ava from 'ava'
-import permutations from '..'
+import permutations from '../src'
 
 const components = {
   Button: `
