@@ -33,6 +33,19 @@ const permutations = getPermutations(src, options)
 
 ## Demo
 
+Given a button component with these `propTypes`:
+
+```js
+Button.propTypes = {
+  big: React.PropTypes.bool,
+  color: React.PropTypes.oneOf(colorKeys),
+  pill: React.PropTypes.bool,
+  outline: React.PropTypes.bool
+}
+```
+
+The rendered result would look something like this:
+
 ![Demo Screenshot](/demo/demo-screenshot.png)
 
 <http://jxnblk.com/react-component-permutations/demo>
