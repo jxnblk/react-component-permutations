@@ -2,7 +2,7 @@
 import fs from 'fs'
 import path from 'path'
 import colors from 'colors.css'
-import permutations from '..'
+import permutations from '../src'
 
 const ButtonSrc = fs.readFileSync('Button.js', 'utf8')
 
