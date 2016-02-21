@@ -33,6 +33,8 @@ const permutations = getPermutations(src, options)
 
 ## Demo
 
+![Demo Screenshot](/demo/demo-screenshot.png)
+
 See the [`/demo`](demo) folder.
 
 MIT License
