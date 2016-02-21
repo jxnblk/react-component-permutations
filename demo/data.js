@@ -13,8 +13,7 @@ const data = {
   ButtonSrc,
   permutations: permutations(ButtonSrc),
   permutationsColors: permutations(ButtonSrc, {
-    color: colorKeys,
-    children: [ 'Hello', 'Howdy' ]
+    color: colorKeys
   })
 }
 

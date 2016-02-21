@@ -20,10 +20,12 @@ class Root extends React.Component {
         <link href='https://npmcdn.com/basscss@8.0.0/css/basscss.min.css' rel='stylesheet' />
         <style dangerouslySetInnerHTML={{ __html: css }} />
 
-        <h1>react-component-permutations demo</h1>
-        <p>Reads a component’s <code>propTypes</code> to return an array of permutations that can be used to show component variations.</p>
+        <header>
+          <h1>react-component-permutations demo</h1>
+          <p>Reads a component’s <code>propTypes</code> to return an array of permutations that can be used to show component variations.</p>
+        </header>
         <hr />
-        <p>Given a Button component with <code>propTypes</code> defined, the module returns {permutations.length} permutations for displaying options.</p>
+        <p>Given a Button component with <code>propTypes</code> defined, the module returns {permutations.length} permutations for showing variations.</p>
         <div className='sm-flex mxn2'>
           <div className='sm-col-6 px2'>
             <h3>Button.js</h3>
@@ -38,7 +40,7 @@ class Root extends React.Component {
               {permutations.map((p, i) => (
                 <div key={i} className='m1 flex-auto'
                   style={{ flexBasis: 128 }}>
-                  <Button {...p} children='Hello' />
+                  <Button children='Hello' {...p} />
                 </div>
               ))}
             </div>
@@ -53,11 +55,15 @@ class Root extends React.Component {
           {permutationsColors.map((p, i) => (
             <div key={i} className='m1 flex-auto'
               style={{ flexBasis: 128 }}>
-              <Button {...p} children='Hello' />
+              <Button children='Hello' {...p} />
             </div>
           ))}
         </div>
         <hr />
+        <footer className='py3'>
+          <a href='//github.com/jxnblk/react-component-permutations' className='mr2'>GitHub</a>
+          <a href='//npmjs.com/package/react-component-permutations'>npm</a>
+        </footer>
       </div>
     )
   }
