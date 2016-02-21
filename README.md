@@ -35,6 +35,8 @@ const permutations = getPermutations(src, options)
 
 ![Demo Screenshot](/demo/demo-screenshot.png)
 
+<http://jxnblk.com/react-component-permutations/demo>
+
 See the [`/demo`](demo) folder.
 
 MIT License
