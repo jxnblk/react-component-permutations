@@ -1,42 +1,39 @@
 
 # react-component-permutations
+# WIP
 
-Creates an array of React component props to display all possible permutations
+Uses propTypes to create an array of React component props to display various permutations.
 
-Uses react-docgen to return component information along with an array of props permutations to display various options for components.
+[![Build Status](https://travis-ci.org/jxnblk/react-component-permutations.svg)](https://travis-ci.org/jxnblk/react-component-permutations)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
+```sh
+npm i react-component-permutations
+```
+
+## Usage
+
+```js
+import fs from 'fs'
+import getPermutations from 'react-component-permutations'
+
+const src = fs.readFileSync('./components/Button.js', 'utf8')
+const options = {}
+const permutations = getPermutations(src, options)
+```
 
 ## Options
 
-- `strings`
-- `numbers`
-- `arrays`
-- `objects`
-- `nodes`
+- `strings` - Array - strings to render for `PropType.string`
+- `numbers` - Array - numbers to render for `PropType.number`
+- `arrays` - Array - arrays to render for `PropType.array`
+- `objects` - Array - objects to render for `PropType.object`
+- `nodes` - Array - nodes to render for `PropTypes.node`
+- `[key]` - Array - any prop name to add to the returned objects array
 
----
+## Demo
 
-## PropTypes
+See the [`/demo`](demo) folder.
 
-### Automatic
-- `bool` - true or false
-- `oneOf` - not computed - n
-
-- `oneOfType` - parse 1 level
-
-### Configurable
-- `string` - optional test strings array
-- `number` - optional test number array
-- `array` - optional
-- `object`
-- `arrayOf` - same config as array
-- `objectOf` - same config as object
-
-- `node`
-- `element` - same as nodes
-
-### Ignored (potentially configurable)
-- `func` - ignored
-- `instanceOf`
-- `shape`
+MIT License
 

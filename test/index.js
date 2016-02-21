@@ -140,7 +140,7 @@ ava('allows configurable arrays', t => {
   const p = permutations(components.Button, {
     arrays: [
       [1, 2, 3],
-      [4, 5, 6],
+      [4, 5, 6]
     ]
   })
   t.same(p.length, 24)
