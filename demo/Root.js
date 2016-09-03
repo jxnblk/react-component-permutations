@@ -16,8 +16,8 @@ class Root extends React.Component {
     return (
       <div className='p3'>
         <meta charSet='utf-8' />
-        <link href='https://npmcdn.com/basscss-basic/index.css' rel='stylesheet' />
-        <link href='https://npmcdn.com/basscss@8.0.0/css/basscss.min.css' rel='stylesheet' />
+        <link href='https://unpkg.com/basscss-basic/index.css' rel='stylesheet' />
+        <link href='https://unpkg.com/basscss@8.0.0/css/basscss.min.css' rel='stylesheet' />
         <style dangerouslySetInnerHTML={{ __html: css }} />
 
         <header>
